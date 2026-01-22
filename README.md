@@ -42,15 +42,15 @@ The following videos demonstrate the task performance:
 <table style="width:100%">
   <tr>
     <td align="center" style="width: 33%">
-      <video src="./assets/press_button.mp4" controls="controls" width="100%"></video>
+      <img src="./assets/press_button.gif" alt="Press Button" width="100%">
       <br><strong>Press Button</strong>
     </td>
     <td align="center" style="width: 33%">
-      <video src="./assets/push_cube.mp4" controls="controls" width="100%"></video>
+      <img src="./assets/push_cube.gif" alt="Push Cube" width="100%">
       <br><strong>Push Cube</strong>
     </td>
     <td align="center" style="width: 33%">
-      <video src="./assets/grasp_cube.mp4" controls="controls" width="100%"></video>
+      <img src="./assets/grasp_cube.gif" alt="Grasp Cube" width="100%">
       <br><strong>Grasp Cube</strong>
     </td>
   </tr>
