@@ -39,17 +39,17 @@ $ python train.py task=ms-poke-cube-sparse steps=500000 enable_reward_learning=f
 
 The following videos demonstrate the task performance:
 
-<table style="width:100%">
+<table style="width:60%">
   <tr>
-    <td align="center" style="width: 33%">
+    <td align="center" style="width: 20%">
       <img src="./assets/press_button.gif" alt="Press Button" width="100%">
       <br><strong>Press Button</strong>
     </td>
-    <td align="center" style="width: 33%">
+    <td align="center" style="width: 20%">
       <img src="./assets/push_cube.gif" alt="Push Cube" width="100%">
       <br><strong>Push Cube</strong>
     </td>
-    <td align="center" style="width: 33%">
+    <td align="center" style="width: 20%">
       <img src="./assets/grasp_cube.gif" alt="Grasp Cube" width="100%">
       <br><strong>Grasp Cube</strong>
     </td>
