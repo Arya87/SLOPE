@@ -37,7 +37,7 @@ $ python train.py task=ms-poke-cube-sparse steps=500000 enable_reward_learning=f
 
 ## Evaluation on Real Robot
 
-The following videos demonstrate the task performance:
+The following videos demonstrate the task performance. **Note:** The GIF files are located in the `./assets/` directory.
 
 <table style="width:60%">
   <tr>
