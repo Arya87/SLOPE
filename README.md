@@ -39,7 +39,7 @@ $ python train.py task=ms-poke-cube-sparse steps=500000 enable_reward_learning=f
 
 The following videos demonstrate the task performance. **Note:** The GIF files are located in the `./assets/` directory.
 
-<table style="width:60%">
+<table style="width:100%">
   <tr>
     <td align="center" style="width: 20%">
       <img src="./assets/press_button.gif" alt="Press Button" width="100%">
