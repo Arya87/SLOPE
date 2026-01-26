@@ -25,10 +25,10 @@ $ pip install git+https://github.com/haosulab/ManiSkill.git@0de43f1f5e10dabd860b
 $ python train.py task=ms-poke-cube-sparse steps=500000 demo_path=/path/to/expert_demos/ms-poke-cube-sparse.pkl enable_reward_learning=false reward_shapping=true warm_MPPI=true update_succ_buffer=true use_quantile_loss=true n_demos=5 seed=1
 
 # Run DEMO3
-$ python train.py task=ms-poke-cube-sparse steps=500000 demo_path=/path/to/expert_demos/ms-poke-cube-sparse.pkl enable_reward_learning=true seed=1
+$ python train.py task=ms-poke-cube-sparse steps=500000 demo_path=/path/to/expert_demos/ms-poke-cube-sparse.pkl enable_reward_learning=true n_demos=5 seed=1
 
 # Run MoDem
-$ python train.py task=ms-poke-cube-sparse steps=500000 demo_path=/path/to/expert_demos/ms-poke-cube-sparse.pkl enable_reward_learning=false seed=1
+$ python train.py task=ms-poke-cube-sparse steps=500000 demo_path=/path/to/expert_demos/ms-poke-cube-sparse.pkl enable_reward_learning=false n_demos=5 seed=1
 
 # Run TD-MPC2
 $ python train.py task=ms-poke-cube-sparse steps=500000 enable_reward_learning=false demo_sampling_ratio=0.0 policy_pretraining=false seed=1
