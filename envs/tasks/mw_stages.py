@@ -18,6 +18,20 @@ def getRewardWrapper(task: str):
         return StickPush_DEMO3
     if task.startswith("stick-pull"):
         return StickPull_DEMO3
+    if task.startswith("hand-insert"):
+        return HandAndInsert_DEMO3
+    if task.startswith("pick-out-of-hole"):
+        return PickOutOfHole_DEMO3
+    if task.startswith("shelf-place"):
+        return ShelfAndPlace_DEMO3
+    if task.startswith("pick-place-wall"):
+        return PickAndPlaceWall_DEMO3
+    if task.startswith("push"):
+        return Push_DEMO3
+    if task.startswith("push-back"):
+        return PushBack_DEMO3
+    if task.startswith("disassemble"):
+        return Disassemble_DEMO3
     raise NotImplementedError(f"Task {task} is not supported yet.")
 
 
@@ -137,6 +151,109 @@ class StickPush_DEMO3(MetaWorldRewardWrapper):
 # Pick And Place (Hard)
 ############################################
 class PickAndPlaceWall_DEMO3(MetaWorldRewardWrapper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.n_stages = 2
+
+    def compute_stage_indicator(self, eval_info):
+        return {
+            "is_grasped": float(eval_info["grasp_success"] or eval_info["success"]),
+            "success": float(eval_info["success"]),
+        }
+
+
+############################################
+# hand-insert (Hard)
+############################################
+class HandAndInsert_DEMO3(MetaWorldRewardWrapper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.n_stages = 2
+
+    def compute_stage_indicator(self, eval_info):
+        return {
+            "is_grasped": float(eval_info["grasp_success"] or eval_info["success"]),
+            "success": float(eval_info["success"]),
+        }
+    
+
+############################################
+# pick-out-of-hole (Hard)
+############################################
+class PickOutOfHole_DEMO3(MetaWorldRewardWrapper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.n_stages = 2
+
+    def compute_stage_indicator(self, eval_info):
+        return {
+            "is_grasped": float(eval_info["grasp_success"] or eval_info["success"]),
+            "success": float(eval_info["success"]),
+        }
+    
+
+############################################
+# shelf-place (Very Hard)
+############################################
+class ShelfAndPlace_DEMO3(MetaWorldRewardWrapper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.n_stages = 2
+
+    def compute_stage_indicator(self, eval_info):
+        return {
+            "is_grasped": float(eval_info["grasp_success"] or eval_info["success"]),
+            "success": float(eval_info["success"]),
+        }
+    
+############################################
+# pick-place-wall (VeryHard)
+############################################
+class PickPlaceWall_DEMO3(MetaWorldRewardWrapper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.n_stages = 2
+
+    def compute_stage_indicator(self, eval_info):
+        return {
+            "is_grasped": float(eval_info["grasp_success"] or eval_info["success"]),
+            "success": float(eval_info["success"]),
+        }
+
+############################################
+# push (Hard)
+############################################
+class Push_DEMO3(MetaWorldRewardWrapper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.n_stages = 2
+
+    def compute_stage_indicator(self, eval_info):
+        return {
+            "is_grasped": float(eval_info["grasp_success"] or eval_info["success"]),
+            "success": float(eval_info["success"]),
+        }
+
+
+############################################
+# push_back (Hard)
+############################################
+class PushBack_DEMO3(MetaWorldRewardWrapper):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.n_stages = 2
+
+    def compute_stage_indicator(self, eval_info):
+        return {
+            "is_grasped": float(eval_info["grasp_success"] or eval_info["success"]),
+            "success": float(eval_info["success"]),
+        }
+
+
+############################################
+# disassemble (Very Hard)
+############################################
+class Disassemble_DEMO3(MetaWorldRewardWrapper):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.n_stages = 2
