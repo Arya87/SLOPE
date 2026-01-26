@@ -9,7 +9,6 @@ def soft_ce(pred, target, cfg):
     return -(target * pred).sum(-1, keepdim=True)
 
 
-# 具有分位回归性质的交叉熵损失
 def quantile_weighted_ce(pred, target, cfg):
     """Computes the quantile weighted cross entropy loss between predictions and soft targets."""
     """CE loss: -p(x)logq(x)"""
@@ -18,11 +17,8 @@ def quantile_weighted_ce(pred, target, cfg):
 
     # print(pred.shape) -> # torch.Size([256, 101])
 
-    # 预测-真实 -> 如果值为负,说明低估,应该施加大惩罚 
     vf_err = pred_scalar - target_scalar
     vf_sign = (vf_err < 0).float()
-    # 标记所有低估的值为1, cfg.quantile = 0.8
-    # 高估 * (1 - cfg.quantile) + 低估 * cfg.quantile
     vf_weight = (1 - vf_sign) * (1 - cfg.quantile) + vf_sign * cfg.quantile
 
     pred = F.log_softmax(pred, dim=-1)

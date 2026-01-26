@@ -82,8 +82,8 @@ def train(cfg: dict):
 
     elif not cfg.enable_reward_learning and cfg.use_demos and cfg.reward_shapping:
         # TD-MPC2 + Reward Shapping + Quantile loss + Effficient training
-        print(f'loading QPot....')
-        cfg.algorithm = "QPot"
+        print(f'loading SLOPE....')
+        cfg.algorithm = "SLOPE"
         trainer_cls = ModemTrainer
         buffer_cls = EnsembleBuffer
 
