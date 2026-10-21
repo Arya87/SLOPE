@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>SLOPE: Optimistic Potential Landscape Shaping<br>for Model-based Reinforcement Learning</h1>
+<h1>SLOPE: Optimistic Potential Landscape Shaping for Model-based Reinforcement Learning</h1>
 
 <p><strong>NeurIPS 2026</strong></p>
 
